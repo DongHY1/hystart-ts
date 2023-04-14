@@ -1,5 +1,13 @@
 # My Starter 
-## Git
+
+## Setup
+
+Node.js >=v16 and pnpm
+Run pnpm install
+
+### Clone Repo
+
+### About Git
 npm install -g commitizen
 
 ## License

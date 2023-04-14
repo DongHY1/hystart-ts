@@ -1,15 +1,18 @@
 {
   "name": "hystart-ts",
+  "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.2.0",
   "description": "my start template",
   "author": "Dong HY <hi@donghy.me>",
-  "homepage": "",
+  "homepage": "https://github.com/DongHY1/[name]#readme",
+  "bugs": "https://github.com/DongHY1/[name]/issues",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "scripts": {
-    "dev": "rollup -c -w",
     "build": "rollup -c",
+    "lint": "eslint --fix",
     "cz": "czg",
     "test": "vitest"
   },
@@ -20,6 +23,9 @@
   },
   "keywords": [],
   "devDependencies": {
+    "@antfu/eslint-config": "^0.38.4",
+    "@eslint/create-config": "^0.4.2",
+    "@rollup/plugin-typescript": "^11.1.0",
     "cz-git": "^1.6.1",
     "czg": "^1.6.1",
     "pnpm": "^8.1.1",
