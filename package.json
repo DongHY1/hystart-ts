@@ -1,0 +1,28 @@
+{
+  "name": "hystart",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.2.0",
+  "description": "",
+  "author": "Dong HY <hi@donghy.me>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "cz": "czg",
+    "test": "vitest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "keywords": [],
+  "devDependencies": {
+    "cz-git": "^1.6.1",
+    "czg": "^1.6.1",
+    "pnpm": "^8.1.1",
+    "typescript": "^5.0.3",
+    "vitest": "^0.30.1"
+  }
+}
