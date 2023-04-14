@@ -14,6 +14,7 @@
 + Insall Node.js >=v16 and pnpm.
 + Install pnpm.
 + degit https://github.com/DongHY1/hystart-ts my-new project.
++ `pnpm install`
 + If you want to use cz-git, please install it before use by running 
 `pnpm add -g commitizen`.
 
