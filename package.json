@@ -6,15 +6,19 @@
   "description": "my start template",
   "author": "Dong HY <hi@donghy.me>",
   "homepage": "https://github.com/DongHY1/[name]#readme",
-  "bugs": "https://github.com/DongHY1/[name]/issues",
   "license": "MIT",
-  "main": "dist/index.cjs",
+  "private": false,
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
-    "lint": "eslint --fix",
-    "cz": "czg",
-    "test": "vitest"
+    "dev": "vitest",
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc && eslint --fix",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run ci && changeset publish",
+    "cz": "czg"
   },
   "config": {
     "commitizen": {
@@ -24,11 +28,13 @@
   "keywords": [],
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
+    "@changesets/cli": "^2.26.1",
     "@eslint/create-config": "^0.4.2",
-    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/node": "^18.16.0",
     "cz-git": "^1.6.1",
     "czg": "^1.6.1",
     "pnpm": "^8.1.1",
+    "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "vitest": "^0.30.1"

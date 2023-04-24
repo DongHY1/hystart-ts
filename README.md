@@ -6,17 +6,32 @@
 
 - 🔍 **Testing Framework**: Simple, efficient, and scalable testing with vitest.
 
-- 🎁 **Bundling**: Tree-shaking to reduce output file size and improve performance with rollup.
+- 🎁 **Bundling**: Tree-shaking to reduce output file size and improve performance with tsup.
 
 - 👮 **Git**: Standardized commit message formats with cz-git.
 
+- 🤖️ **CI/CD** npm workflow with github actions and changeset
+
 ## Setup
 + Insall Node.js >=v16 and pnpm.
-+ Install pnpm.
-+ degit https://github.com/DongHY1/hystart-ts my-new project.
-+ `pnpm install`
-+ If you want to use cz-git, please install it before use by running 
-`pnpm add -g commitizen`.
++ `pnpm install`.
++  Wirte some code.
++  `git add .`
++  Use `pnpm cz` instead of git commit.
++  Done ✨
+
+If you want publish this package, you can use changeset and github actions:
++ `pnpm changeset init`
++ `pnpm changeset`
++ add REPO_TOKEN and NPM_TOKEN env to your repo
+    ```
+    // in publish.yml
+        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    ```           
++ publish your branch
++ In your repo , you will receive github-actions merge request. if you agree merge , this npm package will publish!
+
 
 ## License
 MIT License © 2023 Dong HY
